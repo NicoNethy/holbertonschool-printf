@@ -92,7 +92,7 @@ int _printf(const char *format, ...)
 		/* Move on to the next character */
 		i++;
 	}
-
+	printf("\n");
 	va_end(list);
 
 	/* Return the total number of characters printed */
