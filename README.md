@@ -106,7 +106,7 @@ The _printf function can be used to print various types of data including string
 - %i: Signed integer
 - %: Print Sign
 
-# AUXILIAR FUNCTIONS 
+# FUNCTIONS 
 
 ### printChar(va_list args)
 
@@ -123,6 +123,24 @@ The _printf function can be used to print various types of data including string
 ### printSign(va_list args)
 
 `This function takes a single argument of type va_list which is unused. The function simply calls _putchar() function to print the "%" character and returns the result.`
+
+
+### Function `get_op_func`
+
+The function get_op_func receives a single character as argument and returns a pointer to one of the functions in the list of valid operators ops[]. This function is used by _printf to identify which function to call according to the format string.
+
+**Parameters**
+
+s: a character representing the operator
+
+**Return Value**
+
+A pointer to the corresponding function of the operator
+
+**Code Explanation**
+
+The function get_op_func iterates through the list of op_t structs containing valid operators and their corresponding functions. It checks each op value in the struct against the given s character until it finds a match, then returns the corresponding function. If no match is found, it returns NULL.
+
 
 ### Authors
 
