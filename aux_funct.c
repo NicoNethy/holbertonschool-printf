@@ -31,6 +31,7 @@ int printString(va_list args)
 int printNum(va_list args)
 {
 	long int n = va_arg(args, int);
+	int isNegative = 0;
 
 	if (n < 0)
 	{
