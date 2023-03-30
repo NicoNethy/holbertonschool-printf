@@ -98,7 +98,8 @@ The _printf function can be used to print various types of data including string
 
 **The format string contains placeholders for the arguments, which are indicated by the % character followed by a conversion specifier. The conversion specifier determines how the argument should be formatted.**
 
-##Conversion Specifiers
+###Conversion Specifiers
+
 %s: String
 %c: Character
 %d: Signed integer
