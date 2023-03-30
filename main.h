@@ -27,6 +27,7 @@ int printNum(va_list);
 int printSign(va_list);
 int _putchar(char c);
 int putstring(char *str);
-
+int printInt(va_list args, int base)
 int putNum(unsigned long int n, int base, char *digits);
+int putcharFunc(va_list args, int mode)
 #endif
