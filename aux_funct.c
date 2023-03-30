@@ -53,19 +53,3 @@ int printSign(__attribute__((unused)) va_list args)
 		return (_putchar('%'));
 }
 
-/**
- * putcharFunc - prints a character
- * @args: va_list containing a character
- * @mode: unused
- *
- * Return: number of characters printed
- */
-int putcharFunc(va_list args, int mode)
-{
-	char c = va_arg(args, int);
-	(void) mode;
-
-	write(1, &c, 1);
-
-	return (1);
-}
