@@ -104,8 +104,25 @@ The _printf function can be used to print various types of data including string
 - %c: Character
 - %d: Signed integer
 - %i: Signed integer
-- %: Percent
+- %: Print Sign
 
+# AUXILIAR FUNCTIONS 
+
+### printChar(va_list args)
+
+`This function takes a single argument of type va_list which contains a character value. The function then calls _putchar() function to print the character and returns the result.`
+
+### printString(va_list args)
+
+`This function takes a single argument of type va_list which contains a string. The function then calls the putstring() function to print the string and returns the result.`
+
+### printNum(va_list args)
+
+`This function takes a single argument of type va_list which contains an integer value. The function first checks if the integer value is negative, and if so, it prints a "-" sign before the absolute value of the number. The function then calls putNum() function to print the integer and returns the result.`
+
+### printSign(va_list args)
+
+`This function takes a single argument of type va_list which is unused. The function simply calls _putchar() function to print the "%" character and returns the result.`
 
 ### Authors
 
