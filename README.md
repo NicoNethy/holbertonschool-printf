@@ -84,6 +84,28 @@
 	- How to read the man page: `man ./man_3_printf`
 
 
+# _printf function
+
+This project contains an implementation of the printf function in C. The _printf function takes a format string and arguments as input and prints formatted output to the console.
+
+### Function Prototype
+`int _printf(const char *format, ...);`
+
+# Usage
+
+The _printf function can be used to print various types of data including strings, characters, integers, and decimal numbers. To print a formatted string, you would use the following syntax:
+`_printf("format string", argument1, argument2, ...);`
+
+**The format string contains placeholders for the arguments, which are indicated by the % character followed by a conversion specifier. The conversion specifier determines how the argument should be formatted.**
+
+##Conversion Specifiers
+%s: String
+%c: Character
+%d: Signed integer
+%i: Signed integer
+%: Percent
+
+
 ### Authors
 
 - [NicoNethy](https://github.com/NicoNethy)
