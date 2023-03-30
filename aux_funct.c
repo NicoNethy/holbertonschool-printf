@@ -31,16 +31,13 @@ int printString(va_list args)
 int printNum(va_list args)
 {
 	long int n = va_arg(args, int);
-	int isNegative = 0;
+	int base = 10;
+	int isNegative = (n < 0) ? 1 : 0;
 
-	if (n < 0)
-	{
-		_putchar('-');
-		n = (n * -1);
-		isNegative = 1;
-	}
+	if (isNegative)
+		n = -n;
 
-	return (putNum(n, 10, "0123456789") + isNegative);
+return (putNum((size_t)n, base, "0123456789") + isNegative);
 }
 
 /**
