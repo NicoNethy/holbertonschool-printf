@@ -91,7 +91,7 @@ int putcharFunc(va_list args, int mode)
 int printInt(va_list args, int base)
 {
 	char *buffer;
-	long int n = va_arg(args, int);
+	long int n = va_arg(args, long int);
 	int i = 0, len, negative = 0;
 
 	if (n < 0)
@@ -121,8 +121,8 @@ int printInt(va_list args, int base)
 		}
 		if (negative && base == 10)
 			buffer[i++] = '-';
-		for (i = i - 1; i >= 0; i--)
-			write(1, &buffer[i], 1);
+		for (int j = i - 1; j >= 0; j--)
+			write(1, &buffer[j], 1);
 	}
 	else
 	{
@@ -133,6 +133,5 @@ int printInt(va_list args, int base)
 	len = strlen(buffer);
 	free(buffer);
 
-	return (len);
+return (len);
 }
-
