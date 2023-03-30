@@ -3,7 +3,8 @@
 
 #include <stdarg.h>
 #include <unistd.h>
-
+#include <stdlib.h>
+#include <string.h>
 /**
  * struct op - the struncture
  * @op: the operators
