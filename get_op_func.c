@@ -1,11 +1,10 @@
 #include "main.h"
 
-
 /**
- * get_op_func - gets a function
- * @s: the operator
- * Return: Pointer to one of the functions
- */
+* get_op_func - gets a function
+* @s: the operator
+* Return: Pointer to one of the functions
+*/
 
 int (*get_op_func(char s))(va_list)
 {
@@ -17,15 +16,13 @@ int (*get_op_func(char s))(va_list)
 		{'i', printNum}
 	};
 
+	size_t i;
 
-	int i = 0;
-
-	while (i < 5)
+	for (i = 0; i < sizeof(ops) / sizeof(op_t); i++)
 	{
 		if (ops[i].op == s)
 			return (ops[i].f);
-		i++;
 	}
 
-	return (NULL);
+return (NULL);
 }
