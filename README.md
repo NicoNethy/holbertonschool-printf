@@ -141,6 +141,17 @@ A pointer to the corresponding function of the operator
 
 The function get_op_func iterates through the list of op_t structs containing valid operators and their corresponding functions. It checks each op value in the struct against the given s character until it finds a match, then returns the corresponding function. If no match is found, it returns NULL.
 
+### puts.c
+
+**The code snippet provided contains three functions: `_putchar`, `putstring`, and `putNum`.**
+
+The `_putchar` function is a simple implementation of the standard library function putchar. It writes a character to the standard output stream using the write system call and returns the number of bytes written. If an error occurs, it returns -1 and sets the errno variable.
+
+The `putstring` function takes a string as an argument and prints it to the standard output stream. If the argument is NULL, it prints the string "(null)". It returns the length of the string that was printed.
+
+The `putNum` function is a recursive function that takes an unsigned long integer, a base, and a string of digits as arguments. It prints the integer in the given base using the specified digits. It works by first recursively dividing the number by the base and calling itself with the quotient, and then printing the remainder using the specified digits. It returns the length of the number that was printed.
+
+These three functions are used in conjunction with the printf function to implement various format specifiers for printing characters, strings, and numbers.
 
 ### Authors
 
