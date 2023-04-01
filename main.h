@@ -29,4 +29,5 @@ int printSign(va_list);
 int _putchar(char c);
 int putstring(char *str);
 int putNum(unsigned long int n, int base, char *digits);
+int printBI(va_list arg);
 #endif

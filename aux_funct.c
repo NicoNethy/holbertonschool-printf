@@ -51,3 +51,25 @@ int printSign(__attribute__((unused)) va_list args)
 		return (_putchar('%'));
 }
 
+/**
+* printBI - Print an unsigned int in binary
+* @arg: va_list containing the unsigned int to print
+* Return: Number of characters printed 
+*/
+int printBI(va_list arg)
+{
+unsigned int num = va_arg(arg, unsigned int);
+unsigned int binary[sizeof(num) * 8];
+unsigned int i;
+unsigned int prin = 0;
+
+	for (i = 0; i < sizeof(num) * 8; i++)
+		binary[i] = (num >> i) & 1;
+
+	for (i = sizeof(num) * 8 - 1; i > 0; i--)
+	{
+		prin += _putchar(binary[i] ? '1' : '0');
+	}
+
+return (prin);
+}

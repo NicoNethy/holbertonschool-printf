@@ -13,7 +13,8 @@ int (*get_op_func(char s))(va_list)
 		{'s', printString},
 		{'%', printSign},
 		{'d', printNum},
-		{'i', printNum}
+		{'i', printNum},
+		{'b', printBI},
 	};
 
 	size_t i;
