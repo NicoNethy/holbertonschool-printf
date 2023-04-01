@@ -66,10 +66,11 @@ unsigned int prin = 0;
 	for (i = 0; i < sizeof(num) * 8; i++)
 		binary[i] = (num >> i) & 1;
 
-	for (i = sizeof(num) * 8 - 1; i > 0; i--)
+	for (i = 0; i < sizeof(num) * 8; i++)
 	{
-		prin += _putchar(binary[i] ? '1' : '0');
+		prin += _putchar(binary[sizeof(num) * 8 - i - 1] ? '1' : '0');
 	}
+
 
 return (prin);
 }
