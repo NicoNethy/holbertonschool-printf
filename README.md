@@ -105,6 +105,7 @@ The _printf function can be used to print various types of data including string
 - %d: Signed integer
 - %i: Signed integer
 - %: Print Sign
+- %b: Binary
 
 # FUNCTIONS 
 
