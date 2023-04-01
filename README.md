@@ -1,4 +1,4 @@
-# 0x11. C - printf 
+# C - printf 
 
 - Writing our own `printf` function, this is a project done under [Low Level Programming holbertonschool-printf](https://github.com/NicoNethy/holbertonschool-printf).
 
