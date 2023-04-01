@@ -1,33 +1,26 @@
 #include "main.h"
 #include <stdarg.h>
 
-
 /**
-* printUnsignedDEC - prints an unsigned integer in decimal format
-* @args: the list of arguments
-* Return: the number of characters print
+* printUNS - prints an unsigned integer
+* @args: arguments
+* Return: the number of characters printed
 */
-int printUnsignedDEC(va_list args)
+int printUNS(va_list args)
 {
-unsigned int n = va_arg(args, unsigned int);
-int len = 0;
-char buffer[32];
-int i;
+	unsigned int num = va_arg(args, unsigned int);
+	unsigned int div = 1;
+	int len = 0;
 
-if (n == 0)
-return (_putchar('0'));
+	while (num / div > 9)
+	div *= 10;
 
-	while (n > 0)
+while (div != 0)
 	{
-		buffer[len++] = (n % 2) + '0';
-		n /= 2;
+		len += _putchar('0' + num / div);
+		num %= div;
+		div /= 10;
 	}
 
-buffer[len] = '\0';
-
-for (i = len - 1; i >= 0; i--)
-_putchar(buffer[i]);
-
-	
 return (len);
 }

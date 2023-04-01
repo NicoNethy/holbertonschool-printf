@@ -32,5 +32,5 @@ int putNum(unsigned long int n, int base, char *digits);
 int printBI(va_list arg);
 
 /* Unsigned */
-int printUnsignedDEC(va_list args);
+int printUNS(va_list args);
 #endif
