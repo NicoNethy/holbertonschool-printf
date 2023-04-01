@@ -33,4 +33,6 @@ int printBI(va_list arg);
 
 /* Unsigned */
 int printUNS(va_list args);
+int printUnsignedOCT(va_list args);
+void reverseSTR(char *str, int len);
 #endif

@@ -16,6 +16,7 @@ int (*get_op_func(char s))(va_list)
 		{'i', printNum},
 		{'b', printBI},
 		{'u', printUNS},
+		{'o', printUnsignedOCT},
 	};
 
 	size_t i;
