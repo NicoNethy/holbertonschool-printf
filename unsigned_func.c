@@ -16,7 +16,8 @@ int len = 0;
 	while (num / div > 9)
 	div *= 10;
 
-while (div != 0)
+	while (div != 0)
+
 	{
 		len += _putchar('0' + num / div);
 		num %= div;
@@ -40,7 +41,7 @@ int printUnsignedOCT(va_list args)
 	char buffer[32];
 	int i;
 
-	if (n == 0)
+if (n == 0)
 return (_putchar('0'));
 
 	while (n > 0)
@@ -70,7 +71,7 @@ void reverseSTR(char *str, int len)
 int i, j;
 char temp;
 
-for (i = 0, j = len - 1; i < j; i++, j--)
+	for (i = 0, j = len - 1; i < j; i++, j--)
 	{
 		temp = str[i];
 		str[i] = str[j];
